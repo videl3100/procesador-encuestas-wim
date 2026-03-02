@@ -58,13 +58,15 @@ def analizar_pagina(imagen_b64, numero_pagina, nombre_archivo):
     5. "carrera_interes_antes": (Texto pregunta 5)
     6. "taller_volcanes_calificacion": (Numero 1-5 en tabla pregunta 6)
     7. "taller_minerales_calificacion": (Numero 1-5 en tabla pregunta 6)
-    8. "taller_holograma_calificacion": (Numero 1-5 en tabla pregunta 6)
-    9. "interes_stem_ahora": (Si/No/No sé pregunta 7)
-    10. "volver a participar": (Si/No/No sé pregunta 8)
-    11. "carreras_cree_para_mujeres": (Lista de carreras marcadas en preg 9 ej: ['Ingeniería', 'Ciencias'])
-    12. "recomienda_programa_nps": (Número marcado en preg 10 del 0 al 10)
-    13. "comentarios_mejora": (Texto manuscrito preg 11)
-    14. "contacto": (Telefono/Email preg 12)
+    8. "taller_purificación_del_agua_calificacion": (Numero 1-5 en tabla pregunta 6)
+    9. "taller_holograma_calificacion": (Numero 1-5 en tabla pregunta 6)
+    10. "taller_introduccion_python_calificacion": (Numero 1-5 en tabla pregunta 6)
+    11. "interes_stem_ahora": (Si/No/No sé pregunta 7)
+    12. "volver a participar": (Si/No/No sé pregunta 8)
+    13. "carreras_cree_para_mujeres": (Lista de carreras marcadas en preg 9 ej: ['Ingeniería', 'Ciencias'])
+    14. "recomienda_programa_nps": (En la pregunta 10, identifica qué número del 0 al 10 tiene una 'X', un aspa, o está encerrado/marcado. ADVERTENCIA: La marca o 'X' puede cubrir fuertemente el número, fíjate en el que está exactamente debajo del tachón. Devuelve SOLO el número exacto en formato entero, ej: 8)
+    15. "comentarios_mejora": (Texto manuscrito preg 11)
+    16. "contacto": (Telefono/Email preg 12)
     """
     mensaje = HumanMessage(
         content=[
@@ -157,4 +159,5 @@ if len(st.session_state.resultados) > 0:
         file_name="Base_Datos_WIM.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         type="primary"
+
     )
